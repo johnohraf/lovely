@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наша История ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="background-animation"></div>
+
+    <div class="container">
+        <header class="timer-section">
+            <h1>Мы вместе</h1>
+            <div id="days-counter">0</div>
+            <h2>дней</h2>
+            <p class="subtitle">каждая секунда важна</p>
+        </header>
+
+        <main>
+            <section class="player-section">
+                <h3>Наш плейлист</h3>
+                <div id="music-player">
+                    <div class="track-info">
+                        <p id="track-title">Выберите трек</p>
+                    </div>
+                    <audio id="audio-source"></audio>
+                    <div class="controls">
+                        <button id="prev-btn">⏮</button>
+                        <button id="play-btn">▶</button>
+                        <button id="next-btn">⏭</button>
+                    </div>
+                </div>
+                <ul id="playlist">
+                    </ul>
+            </section>
+
+            <section class="carousel-section">
+                <h3>Наши моменты</h3>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="images/photo1.jpg" alt="Наше фото 1">
+                        <img src="images/photo2.jpg" alt="Наше фото 2">
+                        <img src="images/photo3.jpg" alt="Наше фото 3">
+                        <img src="images/photo4.jpg" alt="Наше фото 4">
+                    </div>
+                    <button class="carousel-btn prev" id="carousel-prev">&#10094;</button>
+                    <button class="carousel-btn next" id="carousel-next">&#10095;</button>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Сделано с любовью для моей единственной ✨</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
