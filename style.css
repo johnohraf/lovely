@@ -215,26 +215,3 @@ footer {
     }
 
 }
-
-/* --- Стили для сердечек, следующих за курсором --- */
-.heart-trail {
-    position: fixed; /* Позиционируем относительно окна браузера */
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    pointer-events: none; /* Сердечки не будут мешать кликать по элементам */
-    user-select: none; /* И их нельзя будет выделить */
-    z-index: 9999;
-    /* Запускаем анимацию */
-    animation: fly-away 1s linear forwards;
-}
-
-@keyframes fly-away {
-    0% {
-        transform: translate(0, 0) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(0, -100px) scale(0); /* Улетают вверх и исчезают */
-        opacity: 0;
-    }
-}
