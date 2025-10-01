@@ -156,36 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
         nextCarouselBtn.click();
     }, 5000); // каждые 5 секунд
 
-    // --- 5. Эффект сердечек за курсором ---
-    let canCreateHeart = true;
-
-    document.addEventListener('mousemove', (e) => {
-        if (!canCreateHeart) return;
-
-        const heart = document.createElement('span');
-        heart.classList.add('heart-trail');
-        heart.textContent = '❤';
-
-        // Позиционируем сердечко под курсором
-        heart.style.left = `${e.clientX}px`;
-        heart.style.top = `${e.clientY}px`;
-
-        // Добавляем немного случайности для красоты
-        const randomX = (Math.random() - 0.5) * 20;
-        const randomY = (Math.random() - 0.5) * 20;
-        heart.style.transform = `translate(${randomX}px, ${randomY}px)`;
-        heart.style.fontSize = `${1 + Math.random()}rem`;
-
-        document.body.appendChild(heart);
-        
-        // Удаляем сердечко из DOM после завершения анимации
-        setTimeout(() => {
-            heart.remove();
-        }, 1000); // 1000 мс = 1с, как в нашей CSS-анимации
-
-        // Ограничиваем частоту создания сердечек для производительности
-        canCreateHeart = false;
-        setTimeout(() => {
-            canCreateHeart = true;
-        }, 50); // Создаем не чаще, чем раз в 50 мс
+  
 });
+
